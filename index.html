@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SMS Forwarder — Privacy Policy</title>
+<style>body{font:16px/1.55 system-ui,sans-serif;max-width:46rem;margin:0 auto;padding:16px;color:#1b1b1b;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #ccc;padding:6px;vertical-align:top;text-align:left}
+code{background:#f2f2f2;padding:0 3px}hr{margin:2.5rem 0}
+@media (prefers-color-scheme:dark){body{color:#e6e6e6;background:#121212}td,th{border-color:#444}code{background:#262626}a{color:#8ab4f8}}</style>
+</head><body>
+<p><a href="#ru">Русская версия ниже</a></p>
+<h1>Privacy Policy — SMS Forwarder</h1>
+<p><em>English below the line is followed by a Russian version («Политика конфиденциальности» ниже).</em></p>
+<p>Effective date: 2026-11-10 · App: SMS Forwarder (<code>com.stufently.smsforwarder</code>) · Developer contact: <strong>[EMAIL — fill in before publishing]</strong></p>
+<h2>1. Summary</h2>
+<p>SMS Forwarder forwards SMS messages that arrive on your phone to destinations <strong>you</strong> configure (Telegram, e-mail, a webhook URL, or another phone number by SMS), according to rules <strong>you</strong> write. Everything happens on your device. The developer runs no servers, receives none of your messages and collects no analytics. The app contains no ads and no third-party tracking SDKs.</p>
+<h2>2. Data the app accesses</h2>
+<table><thead><tr><th>Data</th><th>Why</th><th>Where it goes</th></tr></thead><tbody>
+<tr><td>Incoming SMS: text, sender number, time, SIM slot / subscription</td><td>Check your rules and forward matching messages</td><td>Stored encrypted on the device; matching messages are sent only to the destinations you configured</td></tr>
+<tr><td>Settings you enter: rules, destination settings, bot tokens, SMTP passwords, webhook headers</td><td>Make forwarding work</td><td>Stored on the device; secrets are encrypted with a key in the Android Keystore</td></tr>
+<tr><td>Delivery log: which rule matched, delivery status, error text</td><td>Show you what was forwarded and what failed</td><td>Stored on the device</td></tr>
+<tr><td>Phone numbers you enter for the "another number" channel</td><td>Send SMS to them</td><td>Stored on the device; used only to send SMS through your carrier</td></tr>
+</tbody></table>
+<p>The app requests these permissions:</p>
+<ul>
+<li><strong>Receive SMS</strong> (<code>RECEIVE_SMS</code>) — core function: read incoming messages to forward them.</li>
+<li><strong>Send SMS</strong> (<code>SEND_SMS</code>) — only if you create an "another number" destination; requested on that screen, not at first launch.</li>
+<li><strong>Notifications</strong>, <strong>foreground service (remote messaging)</strong>, <strong>run at startup</strong>, <strong>internet / network state</strong> — to deliver messages in the background reliably and show that forwarding is working.</li>
+</ul>
+<p>The app does <strong>not</strong> read your existing SMS inbox, contacts, call log, location or files.</p>
+<h2>3. Sharing</h2>
+<p>Messages are shared <strong>only</strong> with the destinations you set up, and only when one of your rules matches:</p>
+<ul>
+<li><strong>Telegram</strong> (Telegram Bot API, via the bot token you provide);</li>
+<li><strong>E-mail</strong> through the SMTP server you specify (unencrypted SMTP is allowed only to a server in your local network);</li>
+<li><strong>Webhook</strong> — an HTTPS address you specify (plain HTTP is blocked);</li>
+<li><strong>Another phone number</strong> — an SMS sent from your phone through your carrier.</li>
+</ul>
+<p>These recipients are third parties chosen by you. Their handling of the data is governed by their own terms and privacy policies. The developer never receives the data. If you configure a health-check URL, the app sends a periodic request to it that contains no message content.</p>
+<h2>4. Storage, security and retention</h2>
+<ul>
+<li>Message text and secrets are encrypted on the device (AES-256-GCM, key in Android Keystore).</li>
+<li>You choose how long message text is kept: 1 day, 7 days, 30 days or without limit. After that period the text is erased; delivery metadata (time, status) stays in the log.</li>
+<li>The app's database and settings are excluded from Android cloud backup and device transfer.</li>
+<li>A rules export file you create yourself may contain destination settings (for example a webhook URL); secrets are included only if you choose a password-protected backup. Keep such files private.</li>
+</ul>
+<h2>5. Your choices and deletion</h2>
+<ul>
+<li>Pause forwarding at any time on the main screen.</li>
+<li>Revoke SMS permissions in Android settings at any time.</li>
+<li>Delete all data: Android settings → Apps → SMS Forwarder → Storage → Clear storage, or uninstall the app. Because the developer holds no copy, nothing remains with the developer.</li>
+</ul>
+<h2>6. Children</h2>
+<p>The app is not directed at children under 13 and is not designed for them.</p>
+<h2>7. Prohibited use</h2>
+<p>The app must not be used to monitor another person's messages. Install it only on a phone you own and use. Nobody should ask you to install it in order to receive your codes.</p>
+<h2>8. Changes</h2>
+<p>Material changes will be published at this address with a new effective date, and the app will ask for consent again if the way SMS data is used changes.</p>
+<h2>9. Contact</h2>
+<p>Questions or requests: <strong>[EMAIL — fill in before publishing]</strong>.</p>
+<hr id="ru">
+<h1>Политика конфиденциальности — SMS Forwarder</h1>
+<p>Действует с 2026-11-10 · Приложение: SMS Forwarder (<code>com.stufently.smsforwarder</code>) · Связь с разработчиком: <strong>[EMAIL — заполнить перед публикацией]</strong></p>
+<h2>1. Коротко</h2>
+<p>SMS Forwarder пересылает SMS, пришедшие на ваш телефон, в назначения, которые настраиваете <strong>вы</strong> (Telegram, электронная почта, адрес вебхука или другой номер по SMS), по правилам, которые задаёте <strong>вы</strong>. Всё происходит на устройстве. У разработчика нет серверов, он не получает ваших сообщений и не собирает аналитику. В приложении нет рекламы и сторонних SDK отслеживания.</p>
+<h2>2. К каким данным приложение обращается</h2>
+<table><thead><tr><th>Данные</th><th>Зачем</th><th>Куда попадают</th></tr></thead><tbody>
+<tr><td>Входящие SMS: текст, номер отправителя, время, SIM-слот / подписка</td><td>Проверить ваши правила и переслать подходящие сообщения</td><td>Хранятся на устройстве в зашифрованном виде; подходящие сообщения уходят только в ваши назначения</td></tr>
+<tr><td>Введённые вами настройки: правила, параметры назначений, токены ботов, пароли SMTP, заголовки вебхуков</td><td>Чтобы пересылка работала</td><td>Хранятся на устройстве; секреты зашифрованы ключом из Android Keystore</td></tr>
+<tr><td>Журнал доставки: какое правило сработало, статус, текст ошибки</td><td>Показать, что ушло и что нет</td><td>Хранится на устройстве</td></tr>
+<tr><td>Номера для канала «на другой номер»</td><td>Отправлять на них SMS</td><td>Хранятся на устройстве; используются только для отправки SMS через вашего оператора</td></tr>
+</tbody></table>
+<p>Разрешения:</p>
+<ul>
+<li><strong>Приём SMS</strong> (<code>RECEIVE_SMS</code>) — основная функция: читать входящие, чтобы пересылать.</li>
+<li><strong>Отправка SMS</strong> (<code>SEND_SMS</code>) — только если вы создаёте назначение «на другой номер»; спрашивается на этом экране, а не при первом запуске.</li>
+<li><strong>Уведомления</strong>, <strong>foreground service (remote messaging)</strong>, <strong>запуск после загрузки</strong>, <strong>интернет / состояние сети</strong> — чтобы надёжно доставлять в фоне и показывать, что пересылка работает.</li>
+</ul>
+<p>Приложение <strong>не</strong> читает уже сохранённые SMS, контакты, журнал звонков, местоположение и файлы.</p>
+<h2>3. Передача данных</h2>
+<p>Сообщения передаются <strong>только</strong> в настроенные вами назначения и только когда срабатывает одно из ваших правил:</p>
+<ul>
+<li><strong>Telegram</strong> (Telegram Bot API, через указанный вами токен бота);</li>
+<li><strong>Почта</strong> через указанный вами SMTP-сервер (без шифрования — только сервер в локальной сети);</li>
+<li><strong>Вебхук</strong> — указанный вами адрес HTTPS (обычный HTTP заблокирован);</li>
+<li><strong>Другой номер</strong> — SMS с вашего телефона через вашего оператора.</li>
+</ul>
+<p>Эти получатели — третьи стороны, выбранные вами; обработку данных у них регулируют их условия и политики конфиденциальности. Разработчик данных не получает. Если вы указали адрес мониторинга (health-check), приложение периодически обращается к нему без содержимого сообщений.</p>
+<h2>4. Хранение, защита и сроки</h2>
+<ul>
+<li>Текст сообщений и секреты зашифрованы на устройстве (AES-256-GCM, ключ в Android Keystore).</li>
+<li>Срок хранения текста выбираете вы: сутки, 7 дней, 30 дней или бессрочно. После него текст стирается; метаданные доставки (время, статус) остаются в журнале.</li>
+<li>База и настройки приложения исключены из облачного резервного копирования Android и переноса на новое устройство.</li>
+<li>Файл экспорта правил, который вы создаёте сами, может содержать параметры назначений (например, адрес вебхука); секреты попадают в него только при резервной копии с паролем. Храните такие файлы в тайне.</li>
+</ul>
+<h2>5. Ваш выбор и удаление</h2>
+<ul>
+<li>Пересылку можно приостановить на главном экране в любой момент.</li>
+<li>Разрешения на SMS можно отозвать в настройках Android в любой момент.</li>
+<li>Удалить все данные: Настройки Android → Приложения → SMS Forwarder → Хранилище → Очистить, или удалить приложение. Копии у разработчика нет, поэтому у него ничего не остаётся.</li>
+</ul>
+<h2>6. Дети</h2>
+<p>Приложение не предназначено для детей младше 13 лет.</p>
+<h2>7. Запрещённое использование</h2>
+<p>Приложение нельзя использовать для слежки за чужими сообщениями. Устанавливайте его только на свой телефон. Никто не должен просить вас установить его, чтобы получать ваши коды.</p>
+<h2>8. Изменения</h2>
+<p>Существенные изменения публикуются по этому адресу с новой датой; если меняется способ использования SMS, приложение заново спросит согласие.</p>
+<h2>9. Связь</h2>
+<p>Вопросы и запросы: <strong>[EMAIL — заполнить перед публикацией]</strong>.</p>
+</body></html>
